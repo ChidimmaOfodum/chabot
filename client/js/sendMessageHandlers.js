@@ -8,10 +8,10 @@ export async function handleSmsButtonClick() {
 
         formData.message = message;
 
-        $(".btn-tertiary").show();
+        $(".btn-light").show();
         sendFile("/message", formData).then(async (response) => {
             const data = await response.json();
-            $(".btn-tertiary").hide();
+            $(".btn-light").hide();
             if (response.status === 200) {
                 toast(".smsError", data.message, "success");
             } else {

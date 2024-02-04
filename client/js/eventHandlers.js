@@ -52,7 +52,7 @@ function handleSubmit() {
                 if (response.status === 200) {
                     toast(".serverValidationMsg", data.message, "success");
                     setTimeout(() => {
-                        $("#one").hide();
+                        $("#upload-wrapper").hide();
                         $(".msg-box").show();
                     }, 2000);
                 } else {
