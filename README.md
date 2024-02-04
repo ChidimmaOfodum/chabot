@@ -22,3 +22,8 @@ Navigate to the [website]("https://localhost:5000") on your localhost running on
 - Files should be either 'json' or 'csv'
 - Files should include the following fields : name, cellphone and country
 - Cellphone numbers in the file must be valid and have country code.
+
+### Environment variables:
+- The environment variables needed for the project are listed in the env example file
+- The values are omitted due to security reasons.
+- I am happy to provided these details on request.
