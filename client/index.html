@@ -18,20 +18,20 @@
     ></script>
   </head>
   <body>
-    <div class="container">
-      <section class="row it">
-        <div class="col-sm-offset-1 col-sm-10" id="one">
+    <div class="container first-section">
+
+      <!-- First Section -->
+
+      <section class="row">
+        <div class="col-sm-offset-1 col-sm-10" id="upload-wrapper">
           <p class="instruction">
             Please upload documents only in 'json' or 'csv' format.
           </p>
           <br />
           <div class="row">
-           
               <h3 class="text-center">Contact Files</h3>
-           
-      
           </div>
-     
+          <!-- Upload area -->
           <div id="uploader" >
             <div class="row uploadDoc">
               <div class="col-sm-3">
@@ -67,17 +67,19 @@
             </div>
           
           </div>
+          <!-- Upload area end -->
        
+          <!-- Buttons -->
           <div class="text-center">
             <a class="btn btn-new"><i class="fa fa-plus"></i> Add new</a>
             <a class="btn btn-next"><i class="fa fa-paper-plane"></i> Submit</a>
           
           </div>
           <p class="serverValidationMsg">Server Error. Try again later!</p>
-
+          <!-- Buttons end -->
         </section>
-        <!-- First section -->
-
+        <!-- First section end -->
+      <!-- Second section -->
       <section class="form-outline msg-box">
           <label class="form-label" for="textAreaExample2">Message</label>
           <textarea
@@ -88,10 +90,10 @@
           ></textarea>
 
           <div class="text-center">
-            <button class="btn-next" id="sendsms">
+            <button class="btn btn-next" id="sendsms">
               <i class="fa fa-paper-plane"></i> Send sms
             </button>
-            <button class="btn btn-tertiary" type="button" disabled>
+            <button class="btn btn-light" type="button" disabled>
               <span
                 class="spinner-border spinner-border-sm"
                 role="status"
@@ -102,11 +104,10 @@
             <p class="smsError">Server Error. Try again later!</p> 
           </div>
         </section>
-        <!-- First section -->
+        <!-- Second section end -->
     </div>
  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-   
     <script src="./js/jquery.js" type="module"></script>
   </body>
 </html>
