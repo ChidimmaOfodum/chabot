@@ -13,7 +13,10 @@ jobs:
           name: upgrade
           command: |
             sudo apt-get update
-            curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && sudo apt-get install -y nodejs=20.11.0
+            curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+      - run:
+          name: check installed packages
+          command: sudo apt-cache showpkg nodejs
       - run:
           name: check node version
           command: node --version
