@@ -12,7 +12,7 @@ jobs:
       - run:
           name: upgrade
           command: |
-            curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+            sudo curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
       - run:
           name: check installed packages
           command: sudo apt-cache showpkg nodejs
