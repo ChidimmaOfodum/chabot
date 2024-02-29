@@ -22,11 +22,7 @@ jobs:
       - run:
           name: Start LocalStack
           command: |
-            pip3 install localstack awscli-local[ver1]
-            localstack start -d                     
-
-            echo "Waiting for LocalStack startup..."  
-            localstack wait -t 30
+            pip3 install awscli-local[ver1]    
       - run:
           name: check node version
           command: awslocal s3 mb s3://test-bucket
