@@ -9,6 +9,7 @@ jobs:
     docker:
       - image: cimg/node:20.11.0
       - image: mongo
+      - image: localstack/localstack
     steps:
       - setup_remote_docker:
           docker_layer_caching: false
@@ -28,7 +29,7 @@ jobs:
             localstack wait -t 30
       - run:
           name: check node version
-          command: node --version
+          command: awslocal s3 mb s3://test-bucket
    
 
 # Orchestrate jobs using workflows
