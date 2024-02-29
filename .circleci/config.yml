@@ -16,7 +16,7 @@ jobs:
           command: | 
             sudo apt-get update
             sudo apt-get install python3.6
-            sudo python3.6 -m pip install pip
+            sudo python3 -m pip install pip
       - run:
           name: Start LocalStack
           command: |
