@@ -18,7 +18,7 @@ jobs:
           docker_layer_caching: true
       - run:
           name: swap node version
-          command: curl http://localhost:4566/test-bucket
+          command: curl https://0.0.0.0:4566/test-bucket
           # command: |
           #   set +e
           #   ls
