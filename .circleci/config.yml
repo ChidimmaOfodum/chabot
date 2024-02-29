@@ -8,7 +8,7 @@ jobs:
   say-hello:
     docker:
       - image: cimg/node:20.11.0
-      - image: mongodb
+      - image: mongo
       - image: localstack/localstack
     steps:
       - run:
