@@ -6,19 +6,20 @@ version: 2.1
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   say-hello:
-    machine:
-      image: ubuntu-2004:2024.01.1
+    docker:
+      - image: cimg/node:20.11.0
+      - image: mongodb
+      - image: localstack/localstack
     steps:
       - run:
-          name: upgrade
-          command: sudo apt-get update
-      - run:
-          name: download
+          name: Start LocalStack
           command: |
-            curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt-get install -y nodejs
-      - run:
-          name: check installed packages
-          command: sudo apt-cache showpkg nodejs
+            pip3 install localstack awscli-local[ver1]
+            docker pull localstack/localstack
+            localstack start -d                     
+
+            echo "Waiting for LocalStack startup..."  
+            localstack wait -t 30
       - run:
           name: check node version
           command: node --version
