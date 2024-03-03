@@ -49,6 +49,9 @@ jobs:
               sleep 1
             done
             echo Failed waiting for localstack && exit 1
+      - run:
+          name: Local stack final
+          command: curl localhost:4566/test-bucket
    
 
 # Orchestrate jobs using workflows
