@@ -18,7 +18,7 @@ jobs:
           docker_layer_caching: true
       - run:
           name: swap node version
-          command: lsof -i :4566 
+          command: curl localhost:4566
           # command: |
           #   set +e
           #   ls
