@@ -38,9 +38,8 @@ jobs:
           name: Install python3
           command: | 
             sudo apt-get update
-            sudo apt install --assume-yes software-properties-common
-            sudo add-apt-repository -y ppa:deadsnakes/ppa            
-            sudo apt-get install python3.12
+                   
+            sudo apt-get install python3.11
             python --version
            
       # - run:
